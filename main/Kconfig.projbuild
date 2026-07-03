@@ -1,0 +1,70 @@
+menu "CoreS3 Wake-up PoC Configuration"
+
+    config EXAMPLE_WIFI_SSID
+        string "WiFi SSID"
+        default "YourWiFiSSID"
+        help
+            WiFi network SSID for device connectivity.
+
+    config EXAMPLE_WIFI_PASSWORD
+        string "WiFi Password"
+        default "YourWiFiPassword"
+        help
+            WiFi network password.
+
+    config EXAMPLE_DEVICE_TOKEN
+        string "Device Token"
+        default "your-device-token-here"
+        help
+            Unique device authentication token for cloud services.
+
+    config EXAMPLE_DEVICE_ID
+        string "Device ID"
+        default "cores3-bedroom"
+        help
+            Unique identifier for this device (used in MQTT topics).
+
+    config EXAMPLE_MQTT_BROKER_URI
+        string "MQTT Broker URI"
+        default "mqtt://192.168.3.210:1884"
+        help
+            MQTT broker address. Include port (e.g., mqtt://192.168.1.100:1883).
+
+    config EXAMPLE_MQTT_USERNAME
+        string "MQTT Username"
+        default ""
+        help
+            MQTT broker username (leave empty if no authentication).
+
+    config EXAMPLE_MQTT_PASSWORD
+        string "MQTT Password"
+        default ""
+        help
+            MQTT broker password (leave empty if no authentication).
+
+    config EXAMPLE_CLOUD_VOICE_URL
+        string "Cloud Voice Service URL"
+        default "https://s3.your-domain.com/v1/voice"
+        help
+            Cloud voice ASR/NLU service endpoint.
+
+    config EXAMPLE_COUNT_API_URL
+        string "Employee Count API URL"
+        default "https://your-domain.com/api/v1/employees/count"
+        help
+            Employee count query API endpoint.
+
+    config EXAMPLE_IR_TX_GPIO
+        int "IR Transmitter GPIO"
+        default 9
+        range 0 48
+        help
+            GPIO pin number for IR transmitter (default: GPIO9 for CoreS3).
+
+    config EXAMPLE_HOME_ASSISTANT_URL
+        string "Home Assistant URL"
+        default "http://192.168.3.210:8123"
+        help
+            Home Assistant server URL for discovery and control.
+
+endmenu
